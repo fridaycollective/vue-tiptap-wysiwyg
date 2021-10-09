@@ -12,7 +12,7 @@
       <add-image-modal
           :input-type="inputType"
           v-if="showImageUpload"
-          :user="'CHANGETHISUSERVALUE'"
+          :user="user"
           @inserted="insertImage"
           @closed="showImageUpload = false"
       />
@@ -390,6 +390,9 @@ export default {
     value: {
       type: String,
       default: ""
+    },
+    user: {
+      type: Object
     },
     inputType: {
       type: String,

@@ -9,13 +9,6 @@
       ref="wysiwyg"
   >
     <div v-if="editor">
-      <add-image-modal
-          :input-type="inputType"
-          v-if="showImageUpload"
-          :user="user"
-          @inserted="insertImage"
-          @closed="showImageUpload = false"
-      />
       <div
           class="row"
           :style="
@@ -335,6 +328,22 @@
       </div>
     </div>
 
+    <slot name="imageupload"
+          :insert="insertImage"
+          :cancel="cancelInsertImage"
+          v-if="showImageUpload"
+    >
+    </slot>
+    <!--
+    <add-image-modal
+        :input-type="inputType"
+        v-if="showImageUpload"
+        :user="user"
+        @inserted="insertImage"
+        @closed="showImageUpload = false"
+    />
+    -->
+
     <div class="border p-2 rounded" :class="fullScreen ? 'h-100' : ''">
       <editor-content :editor="editor" class="h-100" :style="this.minHeight ? ('min-height:' + this.minHeight) : ''"/>
     </div>
@@ -357,7 +366,6 @@ import Link from '@tiptap/extension-link'
 import { Color } from '@tiptap/extension-color'
 import { Extension } from "@tiptap/core";
 import { SmilieReplacer } from "./wysiwg-partials/SmilieReplacer";
-import AddImageModal from "./wysiwg-partials/AddImageModal";
 import EvernoteResourceExtension from "./wysiwg-partials/EvernoteResourceExtension";
 import VSwatches from 'vue-swatches';
 
@@ -381,7 +389,6 @@ const CustomTaskItem = TaskItem.extend({
 
 export default {
   components: {
-    AddImageModal,
     EditorContent,
     VSwatches
   },
@@ -448,6 +455,9 @@ export default {
           .run();
       this.showImageUpload = false;
       $("#modal-add-image").modal("hide");
+    },
+    cancelInsertImage() {
+      this.showImageUpload = false;
     },
     applyTextColor() {
       this.editor.chain().focus().setColor(this.textColor).run();

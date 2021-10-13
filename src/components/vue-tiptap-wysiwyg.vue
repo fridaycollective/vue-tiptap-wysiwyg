@@ -334,15 +334,6 @@
           v-if="showImageUpload"
     >
     </slot>
-    <!--
-    <add-image-modal
-        :input-type="inputType"
-        v-if="showImageUpload"
-        :user="user"
-        @inserted="insertImage"
-        @closed="showImageUpload = false"
-    />
-    -->
 
     <div class="border p-2 rounded" :class="fullScreen ? 'h-100' : ''">
       <editor-content :editor="editor" class="h-100" :style="this.minHeight ? ('min-height:' + this.minHeight) : ''"/>
@@ -365,7 +356,6 @@ import TextStyle from '@tiptap/extension-text-style'
 import Link from '@tiptap/extension-link'
 import { Color } from '@tiptap/extension-color'
 import { Extension } from "@tiptap/core";
-import { SmilieReplacer } from "./wysiwg-partials/SmilieReplacer";
 import EvernoteResourceExtension from "./wysiwg-partials/EvernoteResourceExtension";
 import VSwatches from 'vue-swatches';
 
@@ -392,14 +382,10 @@ export default {
     EditorContent,
     VSwatches
   },
-
   props: {
     value: {
       type: String,
       default: ""
-    },
-    user: {
-      type: Object
     },
     inputType: {
       type: String,
@@ -492,7 +478,6 @@ export default {
         Typography,
         TextStyle,
         Color,
-        SmilieReplacer,
         LiteralTab,
         TaskList,
         TaskItem,

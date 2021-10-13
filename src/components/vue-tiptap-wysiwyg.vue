@@ -8,7 +8,7 @@
     "
       ref="wysiwyg"
   >
-    <div v-if="editor">
+    <div v-if="editor && !readOnly">
       <div
           class="row"
           :style="
@@ -331,7 +331,7 @@
     <slot name="imageupload"
           :insert="insertImage"
           :cancel="cancelInsertImage"
-          v-if="showImageUpload"
+          v-if="showImageUpload && !readOnly"
     >
     </slot>
 
@@ -392,6 +392,10 @@ export default {
       default: "notes"
     },
     disableFullScreen: {
+      type: Boolean,
+      default: false
+    },
+    readOnly: {
       type: Boolean,
       default: false
     },
@@ -487,6 +491,7 @@ export default {
         Link,
         EvernoteResourceExtension,
       ],
+      editable: !this.readOnly,
       content: this.value,
       onUpdate: () => {
         // HTML

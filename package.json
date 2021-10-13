@@ -1,6 +1,6 @@
 {
   "name": "vue-tiptap-wysiwyg",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "Vue WYSIWYG Editor based on tiptap",
   "author": "Dean Hopkins",
   "main": "dist/vue-tiptap-wysiwyg.umd.min.js",

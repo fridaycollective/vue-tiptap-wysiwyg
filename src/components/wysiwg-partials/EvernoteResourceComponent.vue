@@ -4,7 +4,7 @@
       <span class="label bg-light-pink">Evernote Resource</span>
 
       <div class="content text-center pt-4">
-        <h5><i class="fad fa-3x text-primary mb-3" :class="getFontAwesomeIconFromMIME(node.attrs.type)" /></h5>
+        <h5><i class="far fa-3x text-primary mb-3" :class="getFontAwesomeIconFromMIME(node.attrs.type)" /></h5>
         <h6>{{ getMimeTypeDisplayName(node.attrs.type) }}</h6>
       </div>
     </div>

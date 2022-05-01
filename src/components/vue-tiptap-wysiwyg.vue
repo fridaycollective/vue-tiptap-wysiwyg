@@ -27,7 +27,7 @@
               }"
                 v-tooltip:bottom="'Bold'"
             >
-              <i class="fad fa-bold" />
+              <i class="far fa-bold" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
@@ -37,7 +37,7 @@
               }"
                 v-tooltip:bottom="'Italic'"
             >
-              <i class="fad fa-italic" />
+              <i class="far fa-italic" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
@@ -47,7 +47,7 @@
               }"
                 v-tooltip:bottom="'Strikethrough'"
             >
-              <i class="fad fa-strikethrough" />
+              <i class="far fa-strikethrough" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
@@ -57,7 +57,7 @@
               }"
                 v-tooltip:bottom="'Code'"
             >
-              <i class="fad fa-code" />
+              <i class="far fa-code" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
@@ -68,7 +68,7 @@
               }"
                 v-tooltip:bottom="'Highlight'"
             >
-              <i class="fad fa-highlighter" />
+              <i class="far fa-highlighter" />
             </button>
             <button
                 class="btn rounded-0 btn-sm" style="padding: 0px !important;"
@@ -87,7 +87,7 @@
                 @click.prevent="showImageUpload = true"
                 v-tooltip:bottom="'Insert Image'"
             >
-              <i class="fad fa-image" />
+              <i class="far fa-image" />
             </button>
             <div class="dropdown">
               <button id="linkDropdown"
@@ -95,7 +95,7 @@
                       v-tooltip:bottom="'Insert Link'"
                       data-bs-toggle="dropdown" aria-expanded="false"
               >
-                <i class="fad fa-link" />
+                <i class="far fa-link" />
               </button>
               <div class="dropdown-menu p-2" aria-labelledby="linkDropdown">
                 <label>Url</label>
@@ -110,7 +110,7 @@
                        type="text" />
 
                 <button class="btn btn-sm btn-secondary w-100" @click="insertLink">
-                  <i class="fad fa-plus-circle" />
+                  <i class="far fa-plus-circle" />
                   Add Link
                 </button>
               </div>
@@ -126,7 +126,7 @@
               }"
                 v-tooltip:bottom="'Paragraph'"
             >
-              <i class="fad fa-paragraph" />
+              <i class="far fa-paragraph" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
@@ -141,7 +141,7 @@
               }"
                 v-tooltip:bottom="'Header 1'"
             >
-              <i class="fad fa-h1" />
+              <i class="far fa-h1" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
@@ -156,7 +156,7 @@
               }"
                 v-tooltip:bottom="'Header 2'"
             >
-              <i class="fad fa-h2" />
+              <i class="far fa-h2" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
@@ -171,7 +171,7 @@
               }"
                 v-tooltip:bottom="'Header 3'"
             >
-              <i class="fad fa-h3" />
+              <i class="far fa-h3" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
@@ -186,7 +186,7 @@
               }"
                 v-tooltip:bottom="'Header 4'"
             >
-              <i class="fad fa-h4" />
+              <i class="far fa-h4" />
             </button>
           </div>
           <div class="btn-group mb-3 border border-secondary me-3" role="group">
@@ -200,7 +200,7 @@
               }"
                 v-tooltip:bottom="'Align Left'"
             >
-              <i class="fad fa-align-left" />
+              <i class="far fa-align-left" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
@@ -214,7 +214,7 @@
               }"
                 v-tooltip:bottom="'Align Center'"
             >
-              <i class="fad fa-align-center" />
+              <i class="far fa-align-center" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
@@ -228,7 +228,7 @@
               }"
                 v-tooltip:bottom="'Align Right'"
             >
-              <i class="fad fa-align-right" />
+              <i class="far fa-align-right" />
             </button>
           </div>
           <div class="btn-group mb-3 border border-secondary me-3" role="group">
@@ -252,7 +252,7 @@
               }"
                 v-tooltip:bottom="'Bullet List'"
             >
-              <i class="fad fa-list" />
+              <i class="far fa-list" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
@@ -263,35 +263,35 @@
               }"
                 v-tooltip:bottom="'Numbered List'"
             >
-              <i class="fad fa-list-ol" />
+              <i class="far fa-list-ol" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
                 @click.prevent="editor.chain().focus().setHorizontalRule().run()"
                 v-tooltip:bottom="'Horizontal Rule'"
             >
-              <i class="fad fa-horizontal-rule" />
+              <i class="far fa-horizontal-rule" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
                 @click.prevent="editor.chain().focus().setHardBreak().run()"
                 v-tooltip:bottom="'Hard Break'"
             >
-              <i class="fad fa-page-break" />
+              <i class="far fa-page-break" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
                 @click.prevent="editor.chain().focus().unsetAllMarks().run()"
                 v-tooltip:bottom="'Clear Formatting'"
             >
-              <i class="fad fa-remove-format" />
+              <i class="far fa-remove-format" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
                 @click.prevent="editor.chain().focus().clearNodes().run()"
                 v-tooltip:bottom="'Clear Structure'"
             >
-              <i class="fad fa-align-slash" />
+              <i class="far fa-align-slash" />
             </button>
           </div>
           <div class="btn-group mb-3 border border-secondary me-3" role="group">
@@ -300,14 +300,14 @@
                 @click.prevent="editor.chain().focus().undo().run()"
                 v-tooltip:bottom="'Undo'"
             >
-              <i class="fad fa-undo" />
+              <i class="far fa-undo" />
             </button>
             <button
                 class="btn rounded-0 btn-sm text-secondary"
                 @click.prevent="editor.chain().focus().redo().run()"
                 v-tooltip:bottom="'Redo'"
             >
-              <i class="fad fa-redo" />
+              <i class="far fa-redo" />
             </button>
           </div>
           <div
@@ -321,7 +321,7 @@
                 @click.prevent="fullScreen = !fullScreen"
                 v-tooltip:bottom="'Full Screen'"
             >
-              <i class="fad fa-expand" />
+              <i class="far fa-expand" />
             </button>
           </div>
         </div>
